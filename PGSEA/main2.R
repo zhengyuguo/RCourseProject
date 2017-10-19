@@ -1,0 +1,8 @@
+library("GeneExpressionSignature")
+library("PGSEA")
+source("myScorePGSEA2.R")
+source("myPGSEA.R")
+data(exampleSet)
+MergingSet=RankMerging(exampleSet,"Spearman")
+print(ScorePGSEA(MergingSet,250, ScoringDistance="avg"))
+print(myScorePGSEA2(exprs(MergingSet),250))

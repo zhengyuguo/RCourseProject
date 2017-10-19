@@ -1,0 +1,5 @@
+This repository contains the following files:
+
+1. AlgorithmDescription.mkd: Contains the bdescription of the algorithm used by the ScoreGSEA function in the Gene Expression Signature package
+2. myScoreGSEA.R: My modified ScoreGSEA.R function
+3. main.R: Test script that calls the original and my modified ScoreGSEA functions.

@@ -1,0 +1,5 @@
+# The idea of extreme cosine score
+  - The idea of extreme cosine score is simple:
+    - Take out the intersection of the disease signature and drug signature. Then compute their cosine similarity.
+    - $$C= \frac{\sum_{i=1}^{n}A_iB_i}{\sqrt{\sum_{i=1}^{n}A^2_i}\cdot\sqrt{\sum_{i=1}^{n}B^2_i}}$$
+

@@ -1,0 +1,23 @@
+The "ScorePGSEA" function takes as input Prototype Ranked Lists (PRLs). A prototype ranked list is a ranked list of genes that represents the consensus trancsriptional response of the drug merged from different cell lines and conditions. If the number of input PRLs is N, the function outputs an NxN matrix whose i,jth entry is the distance between the ith and jth PRL. The distance measure is the "Average Enrichment Score Distance". 
+
+The Average Enrichment Score Distance is computed as follows. Suppose you want to compute this score between two ranked lists y and x. Define:
+
+$p_y$ : The set of most upregulated genes in y
+$q_y$ : The set of most downregulated genes in y
+
+Then use the Parametric Gene Set Enrichment Algorithm to compute the enrichment scores of the most upregulated and downregulated genesets w.r.t to x:
+
+$ES(p_y|x)$ : The enrichment score of $p_y$ wrt ranked list x
+$ES(q_y|x)$ : The enrichment score of $q_y$ wrt ranked list x
+
+Use the enrichment scores of the two gene sets to compute the Total Enrichment Score (TES) of x and y as follows:
+
+$TES_{x,y}=1-[ES(p_y|x)-ES(q_y|x)]/2$
+
+Similarly, compute $TES_{y,x}$
+
+The average of the TES's is then the Average Enrichment Score Distance D(x,y):
+
+$D(x,y)=(TES_{x,y}+TES_{y,x})/2$
+
+

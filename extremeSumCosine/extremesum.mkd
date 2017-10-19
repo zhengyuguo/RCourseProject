@@ -1,0 +1,5 @@
+# The idea of extreme sum score
+1. separate the disease signature in to two part: UpInDisease and DownInDisease
+2. Then intersect UpInDisease and DownInDisease with drug signature and denote them as XUpInDisease and XDownInDisease.
+3. Compute the sum of the drug expression fold change values in the two sets: sum(XUpInDisease) and sum(XDownInDisease)
+4. compute the difference of the two numbers: $Xsum=sum(XUpInDisease)-sum(XDownInDisease)$
